@@ -1,0 +1,1145 @@
+<!--
+Project: SEO Portfolio — Single-file pages (inline CSS)
+Files included in this document:
+  1) index.html
+  2) ashley-stewart.html
+  3) ai-tech.html
+  4) gmb-beauty-parlour.html
+
+Instructions: Copy each block into a separate .html file with the indicated filename. All CSS is inline as requested. Replace placeholders (YOUR_NAME, email, and image placeholders) with your real content and export GSC/GA screenshots into the assets folder when ready.
+-->
+
+
+<!-- ========================= index.html ========================= -->
+
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>SEO Portfolio — YOUR_NAME</title>
+  <meta name="description" content="Local & International SEO for Tourism • Healthcare • eCommerce" />
+  <style>
+    :root {
+      --accent: #0b74de;
+      --muted: #94a3b8;
+      --bg: #071427;
+      --card: #071a2a;
+      --glass: rgba(255, 255, 255, 0.03);
+      --good: #3fcf8e
+    }
+
+    * {
+      box-sizing: border-box
+    }
+
+    html,
+    body {
+      height: 100%;
+      margin: 0;
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+      color: #e6eef8;
+      background: linear-gradient(180deg, #071427 0%, #071422 100%);
+    }
+
+    a {
+      color: var(--accent);
+      text-decoration: none
+    }
+
+    .container {
+      max-width: 1100px;
+      margin: 36px auto;
+      padding: 24px
+    }
+
+    header {
+      display: flex;
+      gap: 18px;
+      align-items: center;
+      justify-content: space-between
+    }
+
+    .brand {
+      display: flex;
+      gap: 12px;
+      align-items: center
+    }
+
+    .logo {
+      width: 56px;
+      height: 56px;
+      border-radius: 10px;
+      background: linear-gradient(135deg, var(--accent), #2dd4bf);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 700;
+      color: #04283a
+    }
+
+    h1 {
+      margin: 0;
+      font-size: 22px
+    }
+
+    .lead {
+      margin: 6px 0 0;
+      color: var(--muted);
+      font-size: 14px
+    }
+
+    nav a.pill {
+      display: inline-block;
+      padding: 6px 10px;
+      border-radius: 999px;
+      background: rgba(255, 255, 255, 0.02);
+      font-size: 13px;
+      color: #cfe6ff;
+      margin-left: 8px
+    }
+
+    /* Hero */
+    .hero {
+      display: grid;
+      grid-template-columns: -1fr 320px;
+      gap: 20px;
+      background: linear-gradient(90deg, rgba(255, 255, 255, 0.02), rgba(255, 255, 255, 0.01));
+      padding: 26px;
+      border-radius: 14px
+    }
+
+    .badge {
+      display: inline-block;
+      background: var(--glass);
+      padding: 6px 10px;
+      border-radius: 8px;
+      color: #bcd6ff;
+      font-size: 13px
+    }
+
+    .tools {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-top: 10px
+    }
+
+    .tool {
+      background: rgba(255, 255, 255, 0.02);
+      padding: 6px 10px;
+      border-radius: 8px;
+      font-size: 13px;
+      color: #cfe6ff
+    }
+
+    .cta-row {
+      display: flex;
+      gap: 10px;
+      margin-top: 12px
+    }
+
+    .btn {
+      background: var(--accent);
+      color: white;
+      padding: 10px 14px;
+      border-radius: 10px;
+      border: 0;
+      cursor: pointer;
+      font-weight: 600
+    }
+
+    .btn.alt {
+      background: transparent;
+      border: 1px solid rgba(255, 255, 255, 0.06);
+      color: #cfe6ff
+    }
+
+    /* Snapshot */
+    .snapshot {
+      background: linear-gradient(180deg, #021022, #02121a);
+      padding: 18px;
+      border-radius: 12px
+    }
+
+    .kpi {
+      display: flex;
+      gap: 12px;
+      margin-top: 12px
+    }
+
+    .kpi .item {
+      flex: 1;
+      background: rgba(255, 255, 255, 0.02);
+      padding: 10px;
+      border-radius: 10px;
+      text-align: center
+    }
+
+    .kpi .num {
+      font-size: 20px;
+      font-weight: 700;
+      color: #fff
+    }
+
+    /* Projects grid */
+    .projects {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 18px;
+      margin-top: 26px
+    }
+
+    .project-card {
+      background: rgba(255, 255, 255, 0.02);
+      padding: 16px;
+      border-radius: 12px;
+      display: flex;
+      flex-direction: column;
+      gap: 12px
+    }
+
+    .project-thumb {
+      height: 160px;
+      border-radius: 10px;
+      overflow: hidden;
+      border: 1px solid rgba(255, 255, 255, 0.03)
+    }
+
+    .project-thumb img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block
+    }
+
+    .meta {
+      color: var(--muted);
+      font-size: 13px
+    }
+
+    .project-cta {
+      margin-top: auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center
+    }
+
+    /* Services / Process / Testimonials */
+    .section {
+      margin-top: 38px
+    }
+
+    .section-title {
+      font-size: 20px;
+      color: #9cd6ff;
+      margin-bottom: 12px
+    }
+
+    .services {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 12px
+    }
+
+    .service {
+      background: rgba(255, 255, 255, 0.02);
+      padding: 16px;
+      border-radius: 12px
+    }
+
+    .process {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px
+    }
+
+    .step {
+      flex: 1;
+      min-width: 180px;
+      background: rgba(255, 255, 255, 0.01);
+      padding: 12px;
+      border-radius: 10px;
+      text-align: center
+    }
+
+    .testimonials {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 12px
+    }
+
+    .testi {
+      background: rgba(255, 255, 255, 0.02);
+      padding: 14px;
+      border-radius: 12px
+    }
+
+    /* Contact */
+    .contact {
+      margin-top: 22px;
+      background: rgba(255, 255, 255, 0.01);
+      padding: 18px;
+      border-radius: 12px
+    }
+
+    input,
+    textarea {
+      width: 100%;
+      padding: 10px;
+      border-radius: 8px;
+      border: 1px solid rgba(255, 255, 255, 0.04);
+      background: transparent;
+      color: #eaf6ff
+    }
+
+    .muted {
+      color: var(--muted)
+    }
+
+    footer {
+      margin-top: 28px;
+      color: var(--muted);
+      font-size: 13px;
+      text-align: center
+    }
+
+    @media (max-width:900px) {
+      .hero {
+        grid-template-columns: 1fr
+      }
+
+      .snapshot {
+        order: 3
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <header>
+      <div class="brand">
+        <div class="logo">SN</div>
+        <div>
+          <h1>Santosh Negi — SEO Specialist</h1>
+          <div class="lead">Local & International SEO — Tourism • Healthcare • eCommerce</div>
+        </div>
+      </div>
+      <nav>
+        <a href="#projects" class="pill">Projects</a>
+        <a href="#services" class="pill">Services</a>
+        <a href="#contact" class="pill">Contact</a>
+        <a href="https://www.linkedin.com/in/santosh-negi07/" style="margin-left:12px" class="btn">Hire me</a>
+      </nav>
+    </header>
+
+    <main>
+      <section class="hero" aria-labelledby="hero-title">
+        <div>
+          <div class="badge">SEO PORTFOLIO — 2025</div>
+          <h2 id="hero-title" style="margin-top:8px">I help local and online businesses grow their visibility, traffic, and sales through technical precision and content strategy.
+          </h2>
+          <p class="muted">I specialize in SEO that drives bookings, calls, and conversions — not just clicks.
+Whether you’re a hotel, clinic, or ecommerce brand, I help you attract customers searching for exactly what you offer.</p>
+
+          <div class="tools">
+            <div class="tool">Google Analytics</div>
+            <div class="tool">Search Console</div>
+            <div class="tool">Screaming Frog</div>
+            <div class="tool">GTmetrix</div>
+            <div class="tool">Ahrefs</div>
+          </div>
+
+          <div class="cta-row">
+            <a href="https://www.linkedin.com/in/santosh-negi07/" class="btn">Get a free mini-audit</a>
+            <a href="#" class="btn alt">Download CV</a>
+          </div>
+        </div>
+
+        <aside class="snapshot">
+          <h4 style="margin:0;color:#9cd6ff">Snapshot of Results</h4>
+          <div class="kpi">
+            <div class="item">
+              <div class="num" data-target="30">0%</div>
+              <div class="lab muted">Best Case Growth</div>
+            </div>
+            <div class="item">
+              <div class="num" data-target="80">0%</div>
+              <div class="lab muted">Max Traffic Gain</div>
+            </div>
+            <div class="item">
+              <div class="num" data-target="40">0</div>
+              <div class="lab muted">Avg Keywords Top10</div>
+            </div>
+          </div>
+          <p class="small muted" style="margin-top:12px">Want similar results? Select a case study and request the full
+            audit.</p>
+        </aside>
+      </section>
+
+      <section id="projects" class="section">
+        <div class="section-title">Featured Case Studies</div>
+        <div class="projects">
+          <!-- Ashley Stewart -->
+          <div class="project-card">
+            <div style="font-size:16px;font-weight:700">Ashley Stewart — Fashion Brand</div>
+            <div class="meta">E-commerce & product content + technical improvements</div>
+            <div class="project-thumb" style="margin-top:10px;">
+              <img src="/image/logo.svg" alt="Ashley Stewart" />
+            </div>
+            <div class="meta">Result: <strong style="color:var(--good)">+30% organic traffic</strong> — detailed case
+              available.</div>
+            <div class="project-cta">
+              <a href="#scrollId" id="viewcasestudy"class="btn viewcasestudyClass">View Case Study</a>
+            </div>
+          </div>
+
+          <!-- AI Tech -->
+          <div class="project-card">
+            <div style="font-size:16px;font-weight:700">AI Development Solutions — Tech</div>
+            <div class="meta">Site restructure, keyword-targeted content, rapid ranking improvements</div>
+            <div class="project-thumb" style="margin-top:10px;">
+              <img src="/image/GSCreport.png" alt="AI Dev" />
+            </div>
+            <div class="meta">Result: <strong style="color:var(--good)">+80% traffic</strong> — reached top 5 for core
+              terms in 1 month.</div>
+            <div class="project-cta">
+              <a href="ai-tech.html" class="btn">View Case Study</a>
+            </div>
+          </div>
+
+          <!-- GMB Beauty Parlour -->
+          <div class="project-card">
+            <div style="font-size:16px;font-weight:700">Beauty Parlour Studio — Local GMB</div>
+            <div class="meta">Local SEO, GBP optimization & review growth</div>
+            <div class="project-thumb" style="margin-top:10px;">
+              <img src="image/GMB.png" alt="GMB" />
+            </div>
+            <div class="meta">Result: High GMB visibility and increased bookings — case study ready.</div>
+            <div class="project-cta">
+              <a href="gmb-beauty-parlour.html" class="btn">View Case Study</a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="services" class="section">
+        <div class="section-title">Services</div>
+        <div class="services">
+          <div class="service">
+            <h3 style="margin:0;color:#fff">Starter Audit</h3>
+            <p class="muted">Site health + GBP check + 10 action items</p>
+            <div style="margin-top:8px;font-weight:700">€150</div>
+          </div>
+          <div class="service">
+            <h3 style="margin:0;color:#fff">Local SEO Boost</h3>
+            <p class="muted">GBP optimization, citations, bilingual pages</p>
+            <div style="margin-top:8px;font-weight:700">€350 / month</div>
+          </div>
+          <div class="service">
+            <h3 style="margin:0;color:#fff">Growth Program</h3>
+            <p class="muted">Technical + content + link strategy</p>
+            <div style="margin-top:8px;font-weight:700">€800+</div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="section-title">Process</div>
+        <div class="process">
+          <div class="step"><strong>Audit</strong>
+            <div class="muted">1–2 weeks</div>
+          </div>
+          <div class="step"><strong>Strategy</strong>
+            <div class="muted">Keyword & content plan</div>
+          </div>
+          <div class="step"><strong>Execution</strong>
+            <div class="muted">Technical fixes & content</div>
+          </div>
+          <div class="step"><strong>Monitor</strong>
+            <div class="muted">Reporting & iterating</div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="section-title">Testimonials</div>
+        <div class="testimonials">
+          <div class="testi">"Helped increase our bookings during shoulder season."<div class="muted">Hotel Manager,
+              Crete</div>
+          </div>
+          <div class="testi">"Fast improvements in site speed and organic traffic."<div class="muted">Clinic Owner,
+              Gurgaon</div>
+          </div>
+          <div class="testi">"GMB optimizations filled our calendar."<div class="muted">Beauty Parlour Owner, Delhi NCR</div>
+          </div>
+        </div>
+      </section>
+
+      <section id="contact" class="section">
+        <div class="section-title">Contact</div>
+        <div class="contact">
+          <p class="muted">Want results like the case studies above? Drop a message.</p>
+          <form onsubmit="event.preventDefault();alert('chl ');">
+            <input placeholder="Your name" required style="margin-bottom:8px" />
+            <input placeholder="Email" required style="margin-bottom:8px" />
+            <textarea rows="4" placeholder="Message (brief)" required style="margin-bottom:8px"></textarea>
+            <button class="btn" type="submit" onclick="getPopup">Send message</button>
+          </form>
+        </div>
+      </section>
+    </main>
+  </div>
+
+  <script>
+    // Simple animated counters
+    function animateCounters() {
+      document.querySelectorAll('.num').forEach(el => {
+        const target = +el.getAttribute('data-target') || 0;
+        let cur = 0; const step = Math.max(1, Math.round(target / 40));
+        const id = setInterval(() => { cur += step; if (cur >= target) { el.textContent = target + (el.dataset.suffix || '%'); clearInterval(id); } else el.textContent = cur + (el.dataset.suffix || '%'); }, 18);
+      });
+    }
+    animateCounters();
+
+
+  </script>
+</body>
+
+</html>
+
+
+<!-- ========================= ashley-stewart.html ========================= -->
+
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Ashley Stewart — Fashion E-commerce</title>
+  <meta name="description" content="Ashley Stewart case study — SEO improvements and 30% traffic growth" />
+  <style>
+    :root {
+      --accent: #0b74de;
+      --muted: #94a3b8;
+      --bg: #071427
+    }
+
+    * {
+      box-sizing: border-box
+    }
+
+    html,
+    body {
+      height: 100%;
+      margin: 0;
+      font-family: Inter, system-ui, Arial;
+      color: #e6eef8;
+      background: linear-gradient(180deg, #071427 0%, #071422 100%);
+    }
+
+    .wrap {
+      max-width: 1000px;
+      margin: 36px auto;
+      padding: 24px
+    }
+
+    a {
+      color: var(--accent)
+    }
+
+    .mini-header {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      margin-bottom: 18px
+    }
+
+    .back {
+      color: #cfe6ff;
+      background: rgba(255, 255, 255, 0.02);
+      padding: 8px 10px;
+      border-radius: 8px
+    }
+
+    .hero {
+      background: linear-gradient(90deg, rgba(255, 255, 255, 0.02), rgba(255, 255, 255, 0.01));
+      padding: 22px;
+      border-radius: 12px
+    }
+
+    h1 {
+      margin: 0 0 8px
+    }
+
+    .muted {
+      color: var(--muted)
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: 1fr 360px;
+      gap: 18px;
+      margin-top: 16px
+    }
+
+    .card {
+      background: rgba(255, 255, 255, 0.02);
+      padding: 14px;
+      border-radius: 10px
+    }
+
+    .placeholder {
+      background: rgba(255, 255, 255, 0.03);
+      height: 220px;
+      border-radius: 8px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #9ca3af
+    }
+
+    .metrics {
+      display: flex;
+      gap: 10px;
+      margin-top: 12px
+    }
+
+    .metric {
+      flex: 1;
+      background: rgba(255, 255, 255, 0.02);
+      padding: 12px;
+      border-radius: 8px;
+      text-align: center
+    }
+
+    .cta {
+      margin-top: 18px
+    }
+        html {
+  scroll-behavior: smooth;
+}
+  </style>
+</head>
+
+<body>
+  <div class="wrap">
+    <div class="mini-header"><a href="index.html" class="back">← Back to portfolio</a>
+      <div class="muted">Ashley Stewart — Fashion Brand</div>
+    </div>
+
+    <section id="scrollId" class="hero scrollClass">
+      <h1>Ashley Stewart — Driving organic growth for competitive e‑commerce</h1>
+      <p class="muted">Improve product visibility and organic traffic through content and technical optimization.</p>
+
+      <div class="grid">
+        <div>
+          <div class="card">
+            <h3>Challenge</h3>
+            <p>Highly competitive fashion keywords, duplicate content issues, and poor schema leading to slow indexation.</p>
+            <h3>Actions</h3>
+            <ul class="muted">
+              <li>Full technical SEO audit (crawl budget, canonicalization, structured data).</li>
+              <li>Optimized category & product copy with search intent focus.</li>
+              <li>Implemented product & breadcrumb schema.</li>
+              <li>Internal linking to boost important collections.</li>
+            </ul>
+            <h3>Timeline</h3>
+            <p class="muted">6-month phased rollout — Audit → Fixes → Content → Monitor</p>
+            <div class="metrics">
+              <div class="metric">
+                <div style="font-weight:700;font-size:18px">+30%</div>
+                <div class="muted">Organic traffic</div>
+              </div>
+              <div class="metric">
+                <div style="font-weight:700;font-size:18px">18</div>
+                <div class="muted">Top 10 keywords</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="card" style="margin-top:14px">
+            <h3>Tools & Approach</h3>
+            <p class="muted">Search Console, Google Analytics, Screaming Frog, Ahrefs (or chosen alternatives), content
+              briefs based on keyword intent.</p>
+            <div class="cta"><a href="#contact" class="back">Request full report (PDF)</a></div>
+          </div>
+        </div>
+
+        <aside>
+          <div class="card">
+            <h3>Visuals</h3>
+            <div class="placeholder">[GSC / GA Growth Graph Placeholder — add PNG]</div>
+            <div style="margin-top:10px;font-size:13px;color:var(--muted)">Before / After screenshots can be added here.
+            </div>
+          </div>
+
+          <div class="card" style="margin-top:12px">
+            <h3>Impact</h3>
+            <p class="muted">30% sustained traffic growth, improved discoverability, and stronger category visibility.</p>
+          </div>
+        </aside>
+      </div>
+    </section>
+
+    <section id="contact" style="margin-top:22px">
+      <div class="card">
+        <h3>Interested in similar results?</h3>
+        <p class="muted">Email: your.email@example.com — Available for freelance & in-house roles.</p>
+      </div>
+    </section>
+
+  </div>
+</body>
+
+</html>
+
+
+<!-- ========================= ai-tech.html ========================= -->
+
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>AI Development Solutions — Tech SEO Sprint </title>
+  <meta name="description" content="AI Development Solutions case study — rapid ranking improvement & traffic growth" />
+  <style>
+    :root {
+      --accent: #0b74de;
+      --muted: #94a3b8
+    }
+
+    * {
+      box-sizing: border-box
+    }
+
+    html,
+    body {
+      height: 100%;
+      margin: 0;
+      font-family: Inter, system-ui, Arial;
+      color: #e6eef8;
+      background: linear-gradient(180deg, #071427 0%, #071422 100%);
+    }
+
+    .wrap {
+      max-width: 1000px;
+      margin: 36px auto;
+      padding: 24px
+    }
+
+    a {
+      color: var(--accent)
+    }
+
+    .mini-header {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      margin-bottom: 18px
+    }
+
+    .back {
+      color: #cfe6ff;
+      background: rgba(255, 255, 255, 0.02);
+      padding: 8px 10px;
+      border-radius: 8px
+    }
+
+    .hero {
+      background: linear-gradient(90deg, rgba(255, 255, 255, 0.02), rgba(255, 255, 255, 0.01));
+      padding: 22px;
+      border-radius: 12px
+    }
+
+    h1 {
+      margin: 0 0 8px
+    }
+
+    .muted {
+      color: var(--muted)
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: 1fr 360px;
+      gap: 18px;
+      margin-top: 16px
+    }
+
+    .card {
+      background: rgba(255, 255, 255, 0.02);
+      padding: 14px;
+      border-radius: 10px
+    }
+
+    .placeholder {
+      background: rgba(255, 255, 255, 0.03);
+      height: 220px;
+      border-radius: 8px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #9ca3af
+    }
+
+    .metrics {
+      display: flex;
+      gap: 10px;
+      margin-top: 12px
+    }
+
+    .metric {
+      flex: 1;
+      background: rgba(255, 255, 255, 0.02);
+      padding: 12px;
+      border-radius: 8px;
+      text-align: center
+    }
+  </style>
+</head>
+
+<body>
+  <div class="wrap">
+    <div class="mini-header"><a href="index.html" class="back">← Back to portfolio</a>
+      <div class="muted">AI Development Solutions — Tech</div>
+    </div>
+
+    <section class="hero">
+      <h1>AI Development Solutions — Rapid SEO sprint</h1>
+      <p class="muted">Gain fast visibility for high-value enterprise keywords.</p>
+
+      <div class="grid">
+        <div>
+          <div class="card">
+            <h3>Challenge</h3>
+            <p>Low visibility for technical service pages; content didn’t match user intent.</p>
+            <h3>Actions</h3>
+            <ul class="muted">
+              <li>Rebuilt site structure to prioritize service pages.</li>
+              <li>Created keyword-focused landing pages & supporting blogs.</li>
+              <li>Fixed canonical tags, meta data, and schema markup.</li>
+            </ul>
+            <h3>Timeline</h3>
+            <p class="muted">1-Month SEO Sprint — Audit → Implement → Measure.</p>
+            <div class="metrics">
+              <div class="metric">
+                <div style="font-weight:700;font-size:18px">Top 5</div>
+                <div class="muted">Rankings for core terms</div>
+              </div>
+              <div class="metric">
+                <div style="font-weight:700;font-size:18px">+80%</div>
+                <div class="muted">Traffic uplift</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="card" style="margin-top:14px">
+            <h3>Why it worked</h3>
+            <p class="muted">Clear keyword mapping, tight technical execution, and rapid content publishing created strong ranking signals.</p>
+          </div>
+        </div>
+
+        <aside>
+          <div class="card">
+            <h3>Visuals</h3>
+            <div class="placeholder">
+              <img src="https://imgd.aeplcdn.com/310x174/n/cw/ec/183389/classic-350-right-side-view-62.jpeg?isig=0&q=80"
+                alt="peoject">
+            </div>
+            <div style="margin-top:10px;font-size:13px;color:var(--muted)">Add GSC screenshots and keyword CSV table
+              here.</div>
+          </div>
+
+          <div class="card" style="margin-top:12px">
+            <h3>Impact</h3>
+            <p class="muted">From invisible to top 5 in 30 days — sustainable traffic uplift and new lead queries.</p>
+          </div>
+        </aside>
+      </div>
+    </section>
+
+    <section style="margin-top:22px">
+      <div class="card">
+        <h3>Interested in a sprint?</h3>
+        <p class="muted">Email: your.email@example.com — available for short sprints and retained engagements.</p>
+      </div>
+    </section>
+
+  </div>
+</body>
+
+<body>
+  <div class="wrap">
+    <div class="mini-header"><a href="index.html" class="back">← Back to portfolio</a>
+      <div class="muted">AI Development Solutions — Tech</div>
+    </div>
+
+    <section class="hero">
+      <h1>Beauty Parlour Studio — Local SEO (Google Business Profile)</h1>
+      <p class="muted">Increase local discovery and appointment bookings.</p>
+
+      <div class="grid">
+        <div>
+          <div class="card">
+            <h3>Challenge</h3>
+            <p>Incomplete GBP setup, inconsistent NAP data, and few reviews.</p>
+            <h3>Actions</h3>
+            <ul class="muted">
+              <li>Optimized GBP listing (services, posts, categories).</li>
+              <li>Built citations and local backlinks.</li>
+              <li>Created bilingual (Hindi-English) service pages.</li>
+                            <li>Encouraged and managed review growth.</li>
+
+            </ul>
+            <h3>Timeline</h3>
+            <p class="muted">Intensive 1-month content — audit, NAP implement, Reviwes.</p>
+            <div class="metrics">
+              <div class="metric">
+                <div style="font-weight:700;font-size:18px">Top 5</div>
+                <div class="muted">Rankings for core terms</div>
+              </div>
+              <div class="metric">
+                <div style="font-weight:700;font-size:18px">+80%</div>
+                <div class="muted">Traffic uplift</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="card" style="margin-top:14px">
+            <h3>Why it worked</h3>
+            <p class="muted">Clear local keyword mapping + NAP covered content + quick technical fixes produced rapid local visbilty. The NAP model works well for new/under-indexed GMB.</p>
+          </div>
+        </div>
+
+        <aside>
+          <div class="card">
+            <h3>Visuals</h3>
+            <div class="placeholder">
+              <img src="https://imgd.aeplcdn.com/310x174/n/cw/ec/183389/classic-350-right-side-view-62.jpeg?isig=0&q=80"
+                alt="peoject">
+            </div>
+            <div style="margin-top:10px;font-size:13px;color:var(--muted)">Add GSC screenshots and keyword CSV table
+              here.</div>
+          </div>
+
+          <div class="card" style="margin-top:12px">
+            <h3>Impact</h3>
+            <p class="muted">From invisible to top 5 in 30 days — sustainable traffic uplift and new lead queries.</p>
+          </div>
+        </aside>
+      </div>
+    </section>
+
+    <section style="margin-top:22px">
+      <div class="card">
+        <h3>Interested in a sprint?</h3>
+        <p class="muted">Email: your.email@example.com — available for short sprints and retained engagements.</p>
+      </div>
+    </section>
+
+  </div>
+</body>
+
+</html>
+
+
+<!-- ========================= gmb-beauty-parlour.html ========================= -->
+
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Beauty Parlour Studio — Local SEO / GMB</title>
+  <meta name="description" content="Local SEO case study — GMB optimization & business impact" />
+  <style>
+    :root {
+      --accent: #0b74de;
+      --muted: #94a3b8
+    }
+
+    * {
+      box-sizing: border-box
+    }
+
+    html,
+    body {
+      height: 100%;
+      margin: 0;
+      font-family: Inter, system-ui, Arial;
+      color: #e6eef8;
+      background: linear-gradient(180deg, #071427 0%, #071422 100%);
+    }
+
+    .wrap {
+      max-width: 1000px;
+      margin: 36px auto;
+      padding: 24px
+    }
+
+    a {
+      color: var(--accent)
+    }
+
+    .mini-header {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      margin-bottom: 18px
+    }
+
+    .back {
+      color: #cfe6ff;
+      background: rgba(255, 255, 255, 0.02);
+      padding: 8px 10px;
+      border-radius: 8px
+    }
+
+    .hero {
+      background: linear-gradient(90deg, rgba(255, 255, 255, 0.02), rgba(255, 255, 255, 0.01));
+      padding: 22px;
+      border-radius: 12px
+    }
+
+    h1 {
+      margin: 0 0 8px
+    }
+
+    .muted {
+      color: var(--muted)
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: 1fr 360px;
+      gap: 18px;
+      margin-top: 16px
+    }
+
+    .card {
+      background: rgba(255, 255, 255, 0.02);
+      padding: 14px;
+      border-radius: 10px
+    }
+
+    .placeholder {
+      background: rgba(255, 255, 255, 0.03);
+      height: 220px;
+      border-radius: 8px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #9ca3af
+    }
+
+    .metrics {
+      display: flex;
+      gap: 10px;
+      margin-top: 12px
+    }
+
+    .metric {
+      flex: 1;
+      background: rgba(255, 255, 255, 0.02);
+      padding: 12px;
+      border-radius: 8px;
+      text-align: center
+    }
+
+
+  </style>
+</head>
+
+<body>
+  <div class="wrap">
+    <div class="mini-header"><a href="index.html" class="back">← Back to portfolio</a>
+      <div class="muted">Beauty Parlour Studio — Local GMB</div>
+    </div>
+
+    <section class="hero">
+      <h1>Beauty Parlour Studio — Local SEO Wins through GMB</h1>
+      <p class="muted">Brief: Created and optimized Google My Business (GBP) profile, built citations, and implemented a
+        review generation workflow.</p>
+
+      <div class="grid">
+        <div>
+          <div class="card">
+            <h3>Challenge</h3>
+            <p>Zero visibility in Google Maps and few customer calls. Competitors dominated local pack.</p>
+            <h3>Actions</h3>
+            <ul class="muted">
+              <li>Created & fully optimized Google Business Profile (photos, services, posts).</li>
+              <li>Fixed NAP across directories and built local citations.</li>
+              <li>Launched simple review generation flow and responded to reviews.</li>
+            </ul>
+            <h3>Timeline</h3>
+            <p class="muted">6 weeks — GBP setup and citation buildout.</p>
+            <div class="metrics">
+              <div class="metric">
+                <div style="font-weight:700;font-size:18px">+40%</div>
+                <div class="muted">Calls from GBP</div>
+              </div>
+              <div class="metric">
+                <div style="font-weight:700;font-size:18px">Top 3</div>
+                <div class="muted">Local pack for key services</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="card" style="margin-top:14px">
+            <h3>Local checklist</h3>
+            <p class="muted">NAP, categories, services, photos, business posts, review follow-up, and weekly GMB posts.
+            </p>
+          </div>
+        </div>
+
+        <aside>
+          <div class="card">
+            <h3>Visuals</h3>
+            <div class="placeholder">[GMB Insights / Actions Screenshot Placeholder]</div>
+            <div style="margin-top:10px;font-size:13px;color:var(--muted)">Drop GMB insights images here when ready.
+            </div>
+          </div>
+
+          <div class="card" style="margin-top:12px">
+            <h3>Impact</h3>
+            <p class="muted">Large increase in calls & bookings; the client reported being fully booked during key
+              weeks.</p>
+          </div>
+        </aside>
+      </div>
+    </section>
+
+    <section style="margin-top:22px">
+      <div class="card">
+        <h3>Want local growth?</h3>
+        <p class="muted">Email: your.email@example.com — I set up GMB profiles and local campaigns.</p>
+      </div>
+    </section>
+
+  </div>
+  <script>
+    document.addEventListener("DOMContentLoaded", function() {
+  const button = document.getElementById("viewcasestudy");
+  const targetSection = document.getElementById("scrollId");
+
+  button.addEventListener("click", function(event) {
+    event.preventDefault(); // Prevent default anchor behavior
+    targetSection.scrollIntoView({
+      behavior: "smooth",
+      block: "start"
+    });
+  });
+});
+
+  </script>
+</body>
+
+</html>
