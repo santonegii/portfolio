@@ -275,6 +275,7 @@ Instructions: Copy each block into a separate .html file with the indicated file
       padding: 14px;
       border-radius: 12px
     }
+    
 
     /* Contact */
     .contact {
@@ -338,7 +339,7 @@ Instructions: Copy each block into a separate .html file with the indicated file
     <main>
       <section class="hero" aria-labelledby="hero-title">
         <div>
-          <div class="badge">SEO PORTFOLIO — 2025</div>
+          <div class="badge">SEO PORTFOLIO</div>
           <h2 id="hero-title" style="margin-top:8px">I help local and online businesses grow their visibility, traffic, and sales through technical precision and content strategy.
           </h2>
           <p class="muted">I specialize in SEO that drives bookings, calls, and conversions — not just clicks.
@@ -387,7 +388,7 @@ Whether you’re a hotel, clinic, or ecommerce brand, I help you attract custome
             <div style="font-size:16px;font-weight:700">Ashley Stewart — Fashion Brand</div>
             <div class="meta">E-commerce & product content + technical improvements</div>
             <div class="project-thumb" style="margin-top:10px;">
-              <img src="/image/logo.svg" alt="Ashley Stewart" />
+              <img src="/image/ashley keyword.png" alt="Ashley Stewart" />
             </div>
             <div class="meta">Result: <strong style="color:var(--good)">+30% organic traffic</strong> — detailed case
               available.</div>
@@ -435,12 +436,12 @@ Whether you’re a hotel, clinic, or ecommerce brand, I help you attract custome
           </div>
           <div class="service">
             <h3 style="margin:0;color:#fff">Local SEO Boost</h3>
-            <p class="muted">GBP optimization, citations, bilingual pages</p>
+            <p class="muted">GBP optimization, local citations, bilingual content</p>
             <div style="margin-top:8px;font-weight:700">€350 / month</div>
           </div>
           <div class="service">
             <h3 style="margin:0;color:#fff">Growth Program</h3>
-            <p class="muted">Technical + content + link strategy</p>
+            <p class="muted">Technical SEO + content strategy + link building</p>
             <div style="margin-top:8px;font-weight:700">€800+</div>
           </div>
         </div>
@@ -479,6 +480,17 @@ Whether you’re a hotel, clinic, or ecommerce brand, I help you attract custome
       </section>
 
       <section id="contact" class="section">
+        <div class="section-title">About Me</div>
+        <div class="contact">
+          <p class="muted">I’m an SEO specialist with 5+ years of experience helping brands improve search visibility and conversions.</p>
+          <p>My approach combines technical precision, content intent mapping, and local search mastery.</p> 
+          <p>🏅 Google-certified · Worked across Tourism, Healthcare, and eCommerce sectors.</p>
+        </div>
+      </section>
+
+
+
+      <section id="contact" class="section">
         <div class="section-title">Contact</div>
         <div class="contact">
           <p class="muted">Want results like the case studies above? Drop a message.</p>
@@ -486,7 +498,14 @@ Whether you’re a hotel, clinic, or ecommerce brand, I help you attract custome
             <input placeholder="Your name" required style="margin-bottom:8px" />
             <input placeholder="Email" required style="margin-bottom:8px" />
             <textarea rows="4" placeholder="Message (brief)" required style="margin-bottom:8px"></textarea>
-            <button class="btn" type="submit" onclick="getPopup">Send message</button>
+            <button class="btn" type="button" onclick="sendEmail()">Send Message</button>
+
+<script>
+function sendEmail() {
+  window.location.href = "mailto:santosh@example.com?subject=SEO%20Inquiry&body=Hi%20Santosh,%0AI%20want%20to%20discuss%20my%20website%20SEO.";
+}
+</script>
+
           </form>
         </div>
       </section>
@@ -622,6 +641,12 @@ Whether you’re a hotel, clinic, or ecommerce brand, I help you attract custome
         html {
   scroll-behavior: smooth;
 }
+
+img.visual_image {
+    height: 100%;
+    width: 100%;
+   border-radius: 8px;
+  }
   </style>
 </head>
 
@@ -672,8 +697,8 @@ Whether you’re a hotel, clinic, or ecommerce brand, I help you attract custome
         <aside>
           <div class="card">
             <h3>Visuals</h3>
-            <div class="placeholder">[GSC / GA Growth Graph Placeholder — add PNG]</div>
-            <div style="margin-top:10px;font-size:13px;color:var(--muted)">Before / After screenshots can be added here.
+            <div class="placeholder"><img src="image/Screenshot 2025-10-27 121851.png" class="visual_image" alt="traffic grapgh"></div>
+            <div style="margin-top:10px;font-size:13px;color:var(--muted)">
             </div>
           </div>
 
@@ -688,7 +713,7 @@ Whether you’re a hotel, clinic, or ecommerce brand, I help you attract custome
     <section id="contact" style="margin-top:22px">
       <div class="card">
         <h3>Interested in similar results?</h3>
-        <p class="muted">Email: your.email@example.com — Available for freelance & in-house roles.</p>
+        <p class="muted">Email: santonegii@gmail.com — Available for freelance & in-house roles.</p>
       </div>
     </section>
 
@@ -801,6 +826,11 @@ Whether you’re a hotel, clinic, or ecommerce brand, I help you attract custome
       border-radius: 8px;
       text-align: center
     }
+    img.visual_images{
+      height: 100%;
+      width: 100%;
+    }
+
   </style>
 </head>
 
@@ -849,11 +879,10 @@ Whether you’re a hotel, clinic, or ecommerce brand, I help you attract custome
           <div class="card">
             <h3>Visuals</h3>
             <div class="placeholder">
-              <img src="https://imgd.aeplcdn.com/310x174/n/cw/ec/183389/classic-350-right-side-view-62.jpeg?isig=0&q=80"
+              <img src="/image/GSCreport.png" class="visual_images"
                 alt="peoject">
             </div>
-            <div style="margin-top:10px;font-size:13px;color:var(--muted)">Add GSC screenshots and keyword CSV table
-              here.</div>
+            <div style="margin-top:10px;font-size:13px;color:var(--muted)"></div>
           </div>
 
           <div class="card" style="margin-top:12px">
@@ -867,7 +896,7 @@ Whether you’re a hotel, clinic, or ecommerce brand, I help you attract custome
     <section style="margin-top:22px">
       <div class="card">
         <h3>Interested in a sprint?</h3>
-        <p class="muted">Email: your.email@example.com — available for short sprints and retained engagements.</p>
+        <p class="muted">Email: Santonegii@gmail.com — available for short sprints and retained engagements.</p>
       </div>
     </section>
 
@@ -921,7 +950,7 @@ Whether you’re a hotel, clinic, or ecommerce brand, I help you attract custome
           <div class="card">
             <h3>Visuals</h3>
             <div class="placeholder">
-              <img src="https://imgd.aeplcdn.com/310x174/n/cw/ec/183389/classic-350-right-side-view-62.jpeg?isig=0&q=80"
+              <img src="/image/beauty-parlor.png" class="visual_imagess"
                 alt="peoject">
             </div>
             <div style="margin-top:10px;font-size:13px;color:var(--muted)">Add GSC screenshots and keyword CSV table
@@ -976,6 +1005,11 @@ Whether you’re a hotel, clinic, or ecommerce brand, I help you attract custome
       font-family: Inter, system-ui, Arial;
       color: #e6eef8;
       background: linear-gradient(180deg, #071427 0%, #071422 100%);
+    }
+
+     img.visual_imagess{
+      height: 100%;
+      width: 100%;
     }
 
     .wrap {
@@ -1104,7 +1138,7 @@ Whether you’re a hotel, clinic, or ecommerce brand, I help you attract custome
           <div class="card">
             <h3>Visuals</h3>
             <div class="placeholder">[GMB Insights / Actions Screenshot Placeholder]</div>
-            <div style="margin-top:10px;font-size:13px;color:var(--muted)">Drop GMB insights images here when ready.
+            <div style="margin-top:10px;font-size:13px;color:var(--muted)">
             </div>
           </div>
 
@@ -1120,7 +1154,7 @@ Whether you’re a hotel, clinic, or ecommerce brand, I help you attract custome
     <section style="margin-top:22px">
       <div class="card">
         <h3>Want local growth?</h3>
-        <p class="muted">Email: your.email@example.com — I set up GMB profiles and local campaigns.</p>
+        <p class="muted">Email: Santonegii@gmail.com — I set up GMB profiles and local campaigns.</p>
       </div>
     </section>
 
